@@ -13,7 +13,7 @@ describe('controllers/offices', () => {
 		officesRepo = repo(officesData);
 		helper = officeHelper({offices: officesRepo}, config);
 	});
-
+//jdfhdfj
 	it('get all', async () => {
 		expect.assertions(1);
 
@@ -22,16 +22,16 @@ describe('controllers/offices', () => {
 		expect(offices).toEqual(JSON.parse(JSON.stringify(officesData)));
 	});
 
-	// it('get once', async () => {
-	// 	expect.assertions(1);
-	//
-	// 	const offices = await helper.getOffices();
-	// 	let officeId = offices.findIndex((office) => office.title === 'Greenberg');
-	//
-	// 	const hero = await helper.getOffice(officeId);
-	//
-	// 	expect(hero).toEqual(offices[officeId]);
-	// });
+	 it('get once', async () => {
+	 	expect.assertions(1);
+
+	 	const offices = await helper.getOffices();
+	 	let officeId = offices.findIndex((office) => office.title === 'Greenberg');
+
+	 	const hero = await helper.getOffice(officeId);
+
+	 	expect(hero).toEqual(offices[officeId]);
+	 });
 
 	// it('create office', async () => {
 	// 	expect.assertions(2);
